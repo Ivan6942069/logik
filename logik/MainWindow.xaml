@@ -30,7 +30,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <Button Content="vyhodnotit" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Height="43" Width="114" IsEnabled="False"/>
+        <Button Content="vyhodnotit" VerticalAlignment="Center" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" Height="43" Width="114" Click="Button_Click"/>
         <Button Content="nova hra" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="3" Grid.Column="4" Grid.Row="9" Height="43" Width="125"/>
         
         <Ellipse  Name="ellipse_0_0" HorizontalAlignment="Center" Height="53" Stroke="Black" VerticalAlignment="Center" Width="52" RenderTransformOrigin="0.583,0.503" Grid.Column="0" Grid.Row="0"  Fill="#FFFFFFFF" MouseDown="Ellipse_MouseDown"/>
