@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace logik
@@ -40,7 +31,7 @@ namespace logik
             {
                 ellipse.Fill = Brushes.Red;
             }
-            
+
             else if (ellipse.Fill == Brushes.Red)
             {
                 ellipse.Fill = Brushes.Green;
@@ -64,7 +55,7 @@ namespace logik
             else if (ellipse.Fill == Brushes.Purple)
             {
                 ellipse.Fill = Brushes.Red;
-            } 
+            }
             else
             {
                 ellipse.Fill = Brushes.Red;
@@ -136,7 +127,7 @@ namespace logik
             barva2 = ziskejbarvu();
             barva3 = ziskejbarvu();
             barva4 = ziskejbarvu();
-            
+
         }
         private Brush ziskejbarvu()
         {
@@ -173,25 +164,38 @@ namespace logik
         {
             //1. varianta
             int pocetcernych = 0;
-            if(ellipse_0_0.Fill == barva1)
+            if (ellipse_0_0.Fill == barva1)
             {
                 pocetcernych++;
             }
-            if (ellipse_0_1.Fill == barva1)
+            if (ellipse_0_1.Fill == barva2)
             {
                 pocetcernych++;
             }
-            if (ellipse_0_2.Fill == barva1)
+            if (ellipse_0_2.Fill == barva3)
             {
                 pocetcernych++;
             }
-            if (ellipse_0_3.Fill == barva1)
+            if (ellipse_0_3.Fill == barva4)
             {
                 pocetcernych++;
             }
-           if(pocetcernych > 0)
+            if (pocetcernych > 0)
             {
-                rectangle_0_4.Fill
+                rectangle_0_0.Fill = Brushes.Black;
+            }
+            if (pocetcernych > 1)
+            {
+                rectangle_0_1.Fill = Brushes.Black;
+            }
+            if (pocetcernych > 2)
+            {
+                rectangle_0_2.Fill = Brushes.Black;
+            }
+            if (pocetcernych > 3)
+            {
+                rectangle_0_3.Fill = Brushes.Black;
+                MessageBox.Show("win");
             }
         }
     }
