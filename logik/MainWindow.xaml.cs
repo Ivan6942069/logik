@@ -30,6 +30,7 @@ namespace logik
             InitializeComponent();
             NastavitVariantu0();
             nastavbarvypc();
+            Title = $"{barva1} - {barva2} - {barva3} - {barva4}";
         }
 
         private void Ellipse_MouseDown(object sender, MouseButtonEventArgs e)
@@ -171,28 +172,66 @@ namespace logik
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            rectangle_0_0.Fill = Brushes.LightGray;
+            rectangle_0_1.Fill = Brushes.LightGray;
+            rectangle_0_2.Fill = Brushes.LightGray;
+            rectangle_0_3.Fill = Brushes.LightGray;
             //1. varianta
             int pocetcernych = 0;
-            if(ellipse_0_0.Fill == barva1)
+            int pocetbilich = 0;
+            if (ellipse_0_0.Fill == barva1)
             {
                 pocetcernych++;
             }
-            if (ellipse_0_1.Fill == barva1)
+            else if (ellipse_0_0.Fill == barva2 || ellipse_0_0.Fill == barva3 || ellipse_0_0.Fill == barva4)
+            {
+                pocetbilich++;
+            }
+            if (ellipse_0_1.Fill == barva2)
             {
                 pocetcernych++;
             }
-            if (ellipse_0_2.Fill == barva1)
+            else if (ellipse_0_1.Fill == barva1 || ellipse_0_1.Fill == barva3 || ellipse_0_1.Fill == barva4)
+            {
+                pocetbilich++;
+            }
+            if (ellipse_0_2.Fill == barva3)
+            {
+               pocetcernych++;
+            }
+            else if (ellipse_0_2.Fill == barva2 || ellipse_0_2.Fill == barva1 || ellipse_0_2.Fill == barva4)
+            {
+                pocetbilich++;
+            }
+            if (ellipse_0_3.Fill == barva4)
             {
                 pocetcernych++;
             }
-            if (ellipse_0_3.Fill == barva1)
+            else if (ellipse_0_3.Fill == barva2 || ellipse_0_3.Fill == barva3 || ellipse_0_3.Fill == barva1)
             {
-                pocetcernych++;
+                pocetbilich++;
             }
-           if(pocetcernych > 0)
+            if (pocetcernych > 0)
             {
-                rectangle_0_4.Fill
+                rectangle_0_0.Fill = Brushes.Black;
             }
+            if (pocetcernych > 1)
+            {
+                rectangle_0_1.Fill = Brushes.Black;
+            }
+            if (pocetcernych > 2)
+            {
+                rectangle_0_2.Fill = Brushes.Black;
+            }
+            if (pocetcernych > 3)
+            {
+                rectangle_0_3.Fill = Brushes.Black;
+                MessageBox.Show("win");
+            }
+        }
+        private void btnnovahra_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
